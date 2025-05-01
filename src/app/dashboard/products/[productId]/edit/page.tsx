@@ -11,8 +11,11 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 
 
-export default async function EditPage({params:{productId}, searchParams:{tab="details"}}:{params:{productId:string}, searchParams:{tab?:string}}) {
+export default async function EditPage({params, searchParams}:{params:Promise<{productId:string}>, searchParams:Promise<{tab?:string}>}) {
     const {userId, redirectToSignIn} = await auth()
+    // :{tab="details"}
+    const {productId} = await params
+    const {tab='details'} = await searchParams
     if (!userId) return redirectToSignIn()
     const product = await getProduct({id:productId, userId})
     if(product == null) return notFound()

@@ -19,7 +19,7 @@ function getCountryCode(req: NextRequest) {
     return code
 }
 
-export async function GET(req: NextRequest, {params}: {params:{productId:string}}){
+export async function GET(req: NextRequest, {params}: {params:Promise<{productId:string}>}){
     const {productId} = await params
     const headersList = await headers()
     const returningUrl = headersList.get("referer") ?? headersList.get('origin')

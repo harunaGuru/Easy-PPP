@@ -17,11 +17,11 @@ import { ChevronDownIcon } from 'lucide-react'
 import { TimezoneDropdownMenu } from '../_components/TimezoneDropdownMenu'
 
 export default async function AnalyticPage(props:{
-    searchParams:{
+    searchParams:Promise<{
         interval?: string;
         timezone?:string;
         productId?:string
-    }
+    }>
 }) {
     const searchParams = await props.searchParams; 
     console.log("searchParams", searchParams)

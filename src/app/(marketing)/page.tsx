@@ -18,7 +18,7 @@ export default function HomePage() {
       <span>Capture 80% of the untapped market with location-based dynamic pricing</span>
       </h2>
       <SignUpButton>
-        <Button asChild className="mt-3 flex gap-2 rounded-lg p-6 text-lg">
+        <Button asChild className="mt-3 flex gap-2 rounded-lg p-6 text-lg cursor-pointer">
           <span>
           Get started for free
           <ArrowRight />
