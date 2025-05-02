@@ -1,7 +1,7 @@
 export const mockData = [
     {
         name: "Parity Group: 0.2-0.3",
-        id: 'dakjkije234mfkm',
+        id: 'dakjkije234mfkms',
         recommendedDiscountPercentage: 0.6,
         countries: [
             {
